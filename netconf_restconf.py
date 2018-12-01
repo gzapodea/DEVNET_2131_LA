@@ -107,3 +107,4 @@ print(str('Interface Operational Status via RESTCONF: \n' + get_restconf_int_ope
 print(str('Device Hostname via NETCONF: \n' + get_netconf_hostname()))
 
 print(str('Device Hostname via RESTCONF: \n' + get_restconf_hostname()))
+
