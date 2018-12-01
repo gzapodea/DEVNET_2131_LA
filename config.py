@@ -15,5 +15,5 @@ SNOW_INSTANCE = 'dev12345'
 
 HOST = '10.10.20.48'
 USER = 'cisco'
-PASS = 'passw'
+PASS = 'cisco_1234!'
 PORT = '830'
