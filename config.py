@@ -6,12 +6,12 @@
 WEBEX_TEAMS_URL = 'https://api.ciscospark.com/v1'
 WEBEX_TEAMS_AUTH = 'Bearer ' + 'Paste your Webex Teams Token here'
 WEBEX_TEAMS_SPACE = 'Config Change Alert'
-WEBEX_TEAMS_MEMBER = 'email'
+WEBEX_TEAMS_MEMBER = 'gzapodea@cisco.com'
 
-SNOW_URL = 'https://dev12345.service-now.com/api/now'
-SNOW_USER = 'user'
+SNOW_URL = 'https://dev48476.service-now.com/api/now'
+SNOW_USER = 'APIUSER'
 SNOW_PASS = 'passw'
-SNOW_INSTANCE = 'dev12345'
+SNOW_INSTANCE = 'dev48476'
 
 HOST = '10.10.20.48'
 USER = 'cisco'

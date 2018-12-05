@@ -67,10 +67,8 @@ def create_room(room_name):
 
     payload = {'title': room_name}
     url = WEBEX_TEAMS_URL + '/rooms'
-    print(url)
     header = {'content-type': 'application/json', 'authorization': WEBEX_TEAMS_AUTH}
     room_response = requests.post(url, data=json.dumps(payload), headers=header, verify=False)
-    print(room_response.status_code)
     room_json = room_response.json()
     room_id = room_json['id']
     print('Created room with the name ' + room_name, 'room id: ', room_id)
@@ -99,8 +97,8 @@ def delete_room(room_id):
 
     url = WEBEX_TEAMS_URL + '/rooms/' + room_id
     header = {'content-type': 'application/json', 'authorization': WEBEX_TEAMS_AUTH}
-    requests.delete(url, headers=header, verify=False)
-    print('\nDeleted Spark Team :  ', room_id)
+    response = requests.delete(url, headers=header, verify=False)
+    print('Print delete room request status: ', response.status_code, room_id)
 
 
 def post_room_message(room_id, message):
@@ -243,6 +241,6 @@ if diff != '':
     delete_room(spark_room_id)
 
     comments = ('The device with the hostname: ' + device_name + ',\ndetected these configuration changes: \n' + diff + '\nConfiguration changed by user: ' + user_info + '\n' + approval_result)
-    create_incident('Configuration Change Notification' + device_name, comments, SNOW_USER, 3)
+    create_incident('Configuration Change Notification - ' + device_name, comments, SNOW_USER, 3)
 
 print('End Application Run')
